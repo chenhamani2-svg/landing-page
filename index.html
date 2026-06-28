@@ -693,18 +693,33 @@ function togglePbtVideo() {
                     <p>השאירי פרטים לשיחת ייעוץ ראשונית ללא עלות</p>
                 </div>
                 
-                <form class="pbt-form" onsubmit="event.preventDefault(); window.location.href='https://henhamani.suenohost.com/%d7%97%d7%9f-%d7%97%d7%9e%d7%90%d7%a0%d7%99-%d7%93%d7%a3-%d7%aa%d7%95%d7%93%d7%94/';">
+                <form class="pbt-form" id="pbt-contact-form">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="ליד חדש מדף הנחיתה">
                     <div class="pbt-form-group">
-                        <input type="text" placeholder="שם מלא" required>
+                        <input type="text" name="name" placeholder="שם מלא" required>
                     </div>
                     <div class="pbt-form-group">
-                        <input type="tel" placeholder="מספר טלפון" required>
+                        <input type="tel" name="phone" placeholder="מספר טלפון" required>
                     </div>
                     <div class="pbt-form-group">
-                        <input type="email" placeholder="אימייל" required>
+                        <input type="email" name="email" placeholder="אימייל" required>
                     </div>
                     <button type="submit" class="pbt-submit-btn">אני רוצה שחן תחזור אליי</button>
                 </form>
+                <script>
+                document.getElementById('pbt-contact-form').addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (response.ok) {
+                        window.location.href = 'https://thank-you-page-seven.vercel.app';
+                    }
+                });
+                </script>
                 
                 <p class="pbt-form-footer">✓ 100% פרטיות מובטחת</p>
             </div>
