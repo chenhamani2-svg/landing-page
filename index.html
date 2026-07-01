@@ -440,9 +440,46 @@ function togglePbtVideo() {
             </div>
 
         </div>
+
+        <div class="pbt-reviews-gallery">
+            <p class="pbt-swipe-hint">← החליקי לצד לראות עוד ←</p>
+            <div class="pbt-reviews-scroll">
+                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/3dd34026-bf2b-4a49-b967-c58ad5c0e332-1.jpeg" target="_blank" class="pbt-image-link">
+                    <div class="pbt-image-frame rotate-left">
+                        <img src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/3dd34026-bf2b-4a49-b967-c58ad5c0e332-1.jpeg" alt="המלצה 1" loading="lazy">
+                    </div>
+                </a>
+                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d4c771e-dbbc-432f-bc26-fa8de539eb5d-1.jpeg" target="_blank" class="pbt-image-link">
+                    <div class="pbt-image-frame rotate-right">
+                        <img src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d4c771e-dbbc-432f-bc26-fa8de539eb5d-1.jpeg" alt="המלצה 2" loading="lazy">
+                    </div>
+                </a>
+                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d908c6b-730c-4206-b24a-e300d28caff0-1.jpeg" target="_blank" class="pbt-image-link">
+                    <div class="pbt-image-frame">
+                        <img src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d908c6b-730c-4206-b24a-e300d28caff0-1.jpeg" alt="המלצה 3" loading="lazy">
+                    </div>
+                </a>
+                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/c2f0cee5-b880-478d-a844-a8cfae7e5063-1.jpeg" target="_blank" class="pbt-image-link">
+                    <div class="pbt-image-frame rotate-left">
+                        <img src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/c2f0cee5-b880-478d-a844-a8cfae7e5063-1.jpeg" alt="המלצה 4" loading="lazy">
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </section>
 
     <style>
+        .pbt-reviews-gallery { padding: 40px 0 20px; }
+        .pbt-swipe-hint { text-align: center; font-size: 14px; color: #CF568B; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.5px; }
+        .pbt-reviews-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 20px 20px 30px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; cursor: grab; }
+        .pbt-reviews-scroll:active { cursor: grabbing; }
+        .pbt-reviews-scroll::-webkit-scrollbar { height: 4px; }
+        .pbt-reviews-scroll::-webkit-scrollbar-track { background: #f5e9f3; border-radius: 10px; }
+        .pbt-reviews-scroll::-webkit-scrollbar-thumb { background: #CF568B; border-radius: 10px; }
+        .pbt-reviews-scroll .pbt-image-link { flex: 0 0 200px; scroll-snap-align: start; }
+        .pbt-reviews-scroll .pbt-image-frame img { width: 200px; height: auto; display: block; border-radius: 8px; }
+
         .pbt-outcomes-section {
             --pbt-brand-1: #CF568B;
             --pbt-brand-2: #9D4381;
@@ -825,36 +862,6 @@ function togglePbtVideo() {
             <a href="#contact" class="pbt-main-button">אני רוצה להתחיל עכשיו</a>
         </div>
 
-        <div class="pbt-testimonials-row" style="margin-top: 70px;">
-            <div class="pbt-gallery-col">
-                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/3dd34026-bf2b-4a49-b967-c58ad5c0e332-1.jpeg" target="_blank" class="pbt-image-link">
-                    <div class="pbt-image-frame rotate-left">
-                        <img decoding="async" src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/3dd34026-bf2b-4a49-b967-c58ad5c0e332-1.jpeg" alt="המלצה 1" loading="lazy">
-                    </div>
-                </a>
-            </div>
-            <div class="pbt-gallery-col">
-                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d4c771e-dbbc-432f-bc26-fa8de539eb5d-1.jpeg" target="_blank" class="pbt-image-link">
-                    <div class="pbt-image-frame rotate-right">
-                        <img decoding="async" src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d4c771e-dbbc-432f-bc26-fa8de539eb5d-1.jpeg" alt="המלצה 2" loading="lazy">
-                    </div>
-                </a>
-            </div>
-            <div class="pbt-gallery-col">
-                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d908c6b-730c-4206-b24a-e300d28caff0-1.jpeg" target="_blank" class="pbt-image-link">
-                    <div class="pbt-image-frame">
-                        <img decoding="async" src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/6d908c6b-730c-4206-b24a-e300d28caff0-1.jpeg" alt="המלצה 3" loading="lazy">
-                    </div>
-                </a>
-            </div>
-            <div class="pbt-gallery-col">
-                <a href="https://henhamani.suenohost.com/wp-content/uploads/2026/06/c2f0cee5-b880-478d-a844-a8cfae7e5063-1.jpeg" target="_blank" class="pbt-image-link">
-                    <div class="pbt-image-frame rotate-left">
-                        <img decoding="async" src="https://henhamani.suenohost.com/wp-content/uploads/2026/06/c2f0cee5-b880-478d-a844-a8cfae7e5063-1.jpeg" alt="המלצה 4" loading="lazy">
-                    </div>
-                </a>
-            </div>
-        </div>
     </div>
 </section>
 
