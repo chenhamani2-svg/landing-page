@@ -774,6 +774,25 @@ function togglePbtVideo() {
                         method: 'POST',
                         body: formData
                     });
+
+                    // Also send the lead to the CRM. Wrapped so it can never block or break the form above.
+                    try {
+                        fetch('https://crm-gold-pi.vercel.app/api/leads', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'x-lead-secret': 'b520babeee8db4523e8495cafd599c185e53f2ab6b7e8f11'
+                            },
+                            body: JSON.stringify({
+                                name: formData.get('name'),
+                                phone: formData.get('phone'),
+                                email: formData.get('email'),
+                                source: 'sponsored_ad',
+                                product_line: 'financial_coaching'
+                            })
+                        }).catch(function() {});
+                    } catch (err) {}
+
                     if (response.ok) {
                         window.location.href = 'https://thank-you-page-seven.vercel.app';
                     }
